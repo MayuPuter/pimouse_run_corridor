@@ -40,6 +40,8 @@
   <!-- Use run_depend for packages you need at runtime: -->
   <!--   <run_depend>message_runtime</run_depend> -->
   <run depend>rospy</run_depend>
+  <run depend>copy</run_depend>
+  <run depend>geometry_msgs</run_depend>
   <run depend>std_msgs</run_depend>
   <run depend>std_srvs</run_depend>
   <run depend>actionlib_msgs</run_depend>
