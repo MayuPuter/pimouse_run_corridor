@@ -39,6 +39,10 @@
   <!--   <buildtool_depend>catkin</buildtool_depend> -->
   <!-- Use run_depend for packages you need at runtime: -->
   <!--   <run_depend>message_runtime</run_depend> -->
+  <run depend>rospy</run_depend>
+  <run depend>std_msgs</run_depend>
+  <run depend>std_srvs</run_depend>
+  <run depend>actionlib_msgs</run_depend>
   <run_depend>pimouse_ros</run_depend>
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
