@@ -10,8 +10,9 @@ class WallStopAccelTest(unittest.TestCase):
 
 		time.sleep(0.3)
 
-		with open("/dev/rtmotor_raw_l0", "r") as lf, open("/dev/rtmotor_raw_r0", "r") as rf:
+		with open("/dev/rtmotor_raw_l0", "r") as lf:
 			left  = int(lf.readline().rstrip())
+		with open("/dev/rtmotor_raw_r0", "r") as rf:
 			right = int(rf.readline().rstrip())
 		
 		return left, right
@@ -28,7 +29,7 @@ class WallStopAccelTest(unittest.TestCase):
 		self.assertTrue(2000 < left ==  right, "can't accerelate")
 
 		left, right = self.set_and_get( 15,   0,  20,  15) # total: 50
-		self.assertTrur(left == right == 0, "can't stop again")
+		self.assertTrue(left == right == 0, "can't stop again")
 
 if __name__ == "__main__":
 	time.sleep(3)
